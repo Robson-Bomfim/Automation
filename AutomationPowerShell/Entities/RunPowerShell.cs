@@ -23,6 +23,12 @@ namespace AutomationPowerShell.Entities
             Command = command;
         }
 
+        public RunPowerShell(string command, Collection<PSObject>  results)
+        {
+            Command = command;
+            Results = results;
+        }
+
         public void ExecutePowerShell()
         {
             RunspaceConfiguration config = RunspaceConfiguration.Create();
